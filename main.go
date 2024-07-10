@@ -12,10 +12,10 @@ var (
 	// command line arguments
 	address = flag.String("address", "0.0.0.0", "Listening address")
 	port    = flag.String("port", "80", "Listening port")
-	sslPort = flag.String("sslPort", "443", "SSL listening port")
+	sslPort = flag.String("sslPort", "443", "TLS listening port")
 	status  = flag.Int("status", 200, "Returned HTTP status code")
-	cert    = flag.String("cert", "cert.pem", "SSL certificate path")
-	key     = flag.String("key", "key.pem", "SSL private Key path")
+	cert    = flag.String("cert", "cert.pem", "TLS certificate path")
+	key     = flag.String("key", "key.pem", "TLS private Key path")
 )
 
 func createHandler(body string) http.HandlerFunc {
